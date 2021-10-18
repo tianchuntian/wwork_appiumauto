@@ -21,10 +21,12 @@ class mainPageTest {
     @Test
     void toDailySchedule() {
         System.out.println("1111");
+        main.toDailySchedule();
     }
 
     @Test
     void toToDo() {
         System.out.println("2222");
+        main.toToDo();
     }
 }

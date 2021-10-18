@@ -40,15 +40,23 @@ public class basePage {
     }
 
     public WebElement byText(String text) {
-        return driver.findElement(By.xpath("//*[@text=" + text + "]"));
+        return driver.findElement(By.xpath("//*[@text='" + text + "']"));
     }
 
     public void click(String text) {
         byText(text).click();
     }
 
-    public void sendKeys(String text, CharSequence keyword) {
-        byText(text).sendKeys(keyword);
+    public void click(By by) {
+        driver.findElement(by).click();
+    }
+
+    public void sendKeys(By by, String keyword) {
+        driver.findElement(by).sendKeys(keyword);
+    }
+
+        public int isEmpty(By by){
+        return driver.findElements(by).size();
     }
 
     public void quit() {
